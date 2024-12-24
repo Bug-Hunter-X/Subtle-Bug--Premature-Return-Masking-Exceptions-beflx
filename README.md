@@ -1,0 +1,3 @@
+# Subtle Bug: Premature Return Masking Exceptions
+
+This repository demonstrates a subtle bug in Python where a premature return statement in a function masks a potential exception that could arise later in the execution flow.  The function `function_with_uncommon_error` is designed to handle the case where 'a' is 0.  However, it immediately returns 0, preventing the ZeroDivisionError from being raised when 'b' is divided by 'a' if 'a' is not 0 and 'b' is 0.  This makes debugging more difficult as the error isn't directly visible.
